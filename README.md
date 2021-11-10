@@ -1,1 +1,27 @@
-# aplikacje-inte-22665
+# Aplikacje internetowe 22665 195ICA
+
+### Laboratorium 1 - Blog
+
+#### Strona startowa
+
+Po wejściu na stronę, można zauważyć tytuł strony oraz dodane posty. 
+W lewym górnym rogu widać plus, za którego pomocą możemy dodać nowy post.
+
+![screen_main_page](assets/main_page.png)
+
+#### Dodawanie postu
+
+Po wciśnieciu wcześniej wspomnianego plusa, przechodzimy do okna, w którym możemy stowrzyć nowy post.
+
+![screen_crt_post](assets/new_post.png)
+
+#### Detale postu
+
+Po kliknięciu na tytuł posta, wyświetlają się jego detale. 
+
+![post_details](assets/post_details.png)
+
+### Panel administratora
+
+![panel_adm](assets/admin_pane.png)
+
