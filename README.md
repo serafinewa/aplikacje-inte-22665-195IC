@@ -2,6 +2,8 @@
 
 ### Laboratorium 1 - Blog
 
+Link do bloga na heroku - [BLOG](https://ewekmarchewek-blog.herokuapp.com/blog/)
+
 #### Strona startowa
 
 Po wejściu na stronę, można zauważyć tytuł strony oraz dodane posty. 
