@@ -1,7 +1,7 @@
 {% load static %}
 <html>
     <head>
-        <title>Django blog</title>
+        <title>Ewa's blog</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,9 +11,20 @@
     </head>
     <body>
         <div class="page-header">
+                     {% if user.is_authenticated %}
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <p class="top-menu">Hejka {{ user.username }} ! <small>(<a href="{% url 'logout' %}" class = "loguout">log out</a>)</small></p>
+            <h1><a href="{% url 'post_list' %}">BLOG by ewekmarchewek!</a></h1>
+                     {% endif %}
+            <h1><a href="/">BLOG by ewekmarchewek!</a></h1>
+             {% if user.is_authenticated %}
+			<p class="text-end"><a href="{% url 'change_password' %}">tutaj zmienisz hasło</a></p>
+                    {% else %}
+            <p class="text-start"><a href="{% url 'register' %}">tutaj się zarejestrujesz</a></p>
+			<p class="text-start"><a href="{% url 'login' %}">tutaj się zalogujesz</a></p>
+			<p class="text-start"><a href="{% url 'reset_password' %}">tutaj zresetujesz hasło</a></p>
+                    {% endif %}
 
-            <h1><a href="{% url 'post_list' %}">Testuje bloga - Ewa</a></h1>
         </div>
 
         <div class="content container">
