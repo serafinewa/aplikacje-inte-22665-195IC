@@ -32,15 +32,21 @@ Po kliknięciu na tytuł posta, wyświetlają się jego detale.
 
 #### Widok bloga przed zalogowaniem się użytkownika.
 ![before_login](assets/blog_beforelogin.png)
+
 #### Widok bloga po zalogowaniu się użytkownika
 ![logged_user](assets/blog_loggeduser.png)
+
 #### Formularz rejestracji
 ![register_form](assets/blog_registerform.png)
+
 #### Pomyślna rejestracja użytkownika
 ![after_register](assets/blog_afterregister.png)
+
 ####Formularz logowania
 ![login_form](assets/blog_loginform.png)
+
 ####Niepomyślne logowanie
 ![failed_login](assets/blog_failedlogin.png)
+
 ####Formularz resetowania hasła
 ![reset_password_form](assets/blog_resetpasswordform.png)
