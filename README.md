@@ -42,11 +42,11 @@ Po kliknięciu na tytuł posta, wyświetlają się jego detale.
 #### Pomyślna rejestracja użytkownika
 ![after_register](assets/blog_afterregister.png)
 
-####Formularz logowania
+#### Formularz logowania
 ![login_form](assets/blog_loginform.png)
 
-####Niepomyślne logowanie
+#### Niepomyślne logowanie
 ![failed_login](assets/blog_failedlogin.png)
 
-####Formularz resetowania hasła
+#### Formularz resetowania hasła
 ![reset_password_form](assets/blog_resetpasswordform.png)
