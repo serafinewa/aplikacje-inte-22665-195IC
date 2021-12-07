@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-b!^-j_!ch83-wn%96kyvrh4p20g+$32ouj#*a#*b#rjb_%@$^%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = ['.herokuapp.com','blogserafin.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -47,7 +47,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.discord',
-
+    #dodsane0712
+    'social_django',
+    'django_extensions',
 
 ]
 
@@ -139,6 +141,8 @@ LOGOUT_REDIRECT_URL = 'login'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#dodane
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
@@ -153,6 +157,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
 ]
 
 SITE_ID = 1
@@ -167,7 +173,12 @@ EMAIL_PORT = 587
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+#facebook
+SOCIAL_AUTH_FACEBOOK_KEY = '620561538993607' # Facebook App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '348f304f9af928e7b4d30184f90e52bf' # Facebook App Secret
+#google
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '938205927192-rpf65qf902grgkr7ad6gg7pr7hi3j13r.apps.googleusercontent.com' # Google Consumer Key
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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' # Google Consumer Secret
 

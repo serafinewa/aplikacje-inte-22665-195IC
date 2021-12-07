@@ -1,5 +1,6 @@
 {% extends "blog/base.html" %}
 {% block content %}
+{% load account socialaccount %}
 
 {% if form.errors %}
 <p>Coś poszło nie tak! Spróbuj ponownie.</p>
@@ -21,14 +22,26 @@
   <input style="margin-left: 12px;" type="submit" value="login" />
   <input style="text-align: center" type="hidden" name="next" value="{{ next }}" />
   <ul class="socialaccount_providers">
+    <!--
     <li>
       <a title="Google" class="socialaccount_provider google " href="/accounts/google/login/?process=login"></span>Google</a>
     </li>
-    <li>
-      <a title="Discord" class="socialaccount_provider discord " href="/accounts/discord/login/?process=login"></span>Discord</a>
+    -->
+    <br>
+    <li class="google">
+    <a href="{% url "social:begin" "google-oauth2" %}">Login with Google</a>
     </li>
-  </ul>
 
+    <!--dodane0712-->
+    </ul>
+
+    <div class="social">
+      <ul>
+        <li class="facebook">
+          <a href="{% url "social:begin" "facebook" %}">Sign in with  Facebook</a>
+        </li>
+      </ul>
+    </div>
 
 
 </form>

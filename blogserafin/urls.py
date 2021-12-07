@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
@@ -44,4 +45,8 @@ urlpatterns = [
 
     path('accounts/', include('allauth.urls')),
     path('', include('blog.urls')),
+    #dodane0712
+    path('social-auth/',
+    include('social_django.urls', namespace='social')),
+
 ]
