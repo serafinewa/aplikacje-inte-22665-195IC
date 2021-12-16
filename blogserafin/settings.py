@@ -50,6 +50,10 @@ INSTALLED_APPS = [
     #dodsane0712
     'social_django',
     'django_extensions',
+    #dodane16.12
+    'books.apps.BooksConfig',
+    'rest_framework',
+    'api.apps.ApiConfig',
 
 ]
 
