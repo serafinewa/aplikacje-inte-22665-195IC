@@ -1,5 +1,6 @@
 # Aplikacje internetowe 22665 195ICA
 
+
 ## Laboratorium 1 - Blog
 
 Link do bloga na heroku - [BLOG](https://ewekmarchewek-blog.herokuapp.com/blog/)
