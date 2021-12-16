@@ -1,6 +1,11 @@
 # Aplikacje internetowe 22665 195ICA
 
+<p><a href="#Laboratorium1">Laboratorium 1</a></p>
+<p><a href="#Laboratorium2">Laboratorium 2</a></p>  
+<p><a href="#Laboratorium3">Laboratorium 3</a></p>
+<p><a href="#Laboratorium4">Laboratorium 4</a></p>
 
+<a id="laboratorium1"></a>
 ## Laboratorium 1 - Blog
 
 Link do bloga na heroku - [BLOG](https://ewekmarchewek-blog.herokuapp.com/blog/)
@@ -28,7 +33,7 @@ Po kliknięciu na tytuł posta, wyświetlają się jego detale.
 
 ![panel_adm](assets/admin_pane.png)
 
-
+<a id="laboratorium2"></a>
 ## Laboratorium 2 - Blog i konta użytkowników.
 
 #### Widok bloga przed zalogowaniem się użytkownika.
@@ -51,3 +56,19 @@ Po kliknięciu na tytuł posta, wyświetlają się jego detale.
 
 #### Formularz resetowania hasła
 ![reset_password_form](assets/blog_resetpasswordform.png)
+
+<a id="laboratorium3"></a>
+## Laboratorium 3 - Różne sposoby uwierzytelniania.
+#### Uwierzytelnianie za pomocą Google
+![googleauth](assets/auth_google_working.png)
+#### Uwierzytelnianie za pomocą Facebooka
+![facebookauth](assets/auth_facebook_working.png)
+
+<a id="laboratorium4"></a>
+## Laboratorium 4 - REST API z DRF.
+#### Books ( dodanie własnej książki )
+![booksadd](assets/books_add.png)
+#### Books - wyświetlanie listy książek
+![books](assets/books.png)
+#### API Books
+![facebookauth](assets/api.png)
