@@ -54,6 +54,8 @@ INSTALLED_APPS = [
     'books.apps.BooksConfig',
     'rest_framework',
     'api.apps.ApiConfig',
+    #'django.contrib.staticfiles',  # required for serving swagger ui's css/js files
+    #'drf_yasg',
 
 ]
 

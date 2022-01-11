@@ -4,6 +4,7 @@
 <p><a href="#Laboratorium2">Laboratorium 2</a></p>  
 <p><a href="#Laboratorium3">Laboratorium 3</a></p>
 <p><a href="#Laboratorium4">Laboratorium 4</a></p>
+<p><a href="#Laboratorium5">Laboratorium 5</a></p>
 
 <a id="laboratorium1"></a>
 ## Laboratorium 1 - Blog
@@ -72,3 +73,26 @@ Po kliknięciu na tytuł posta, wyświetlają się jego detale.
 ![books](assets/books.png)
 #### API Books
 ![facebookauth](assets/api.png)
+
+
+<a id="laboratorium5"></a>
+## Laboratorium 5 - Web Scraping.
+#### Podczas scrape'owania najczęściej zależy nam na wyciągnięciu informacji z kodu HTML na stronach, do tego przydadzą się biblioteka Beautifulsoup oraz pakiet Requests. 
+#### Za pomocą biblioteki Requests możemy pobierać strony w Pythonie, a pakiet Beautifulsoup analizuje kod HTML i pomaga w formatowaniu i organizowaniu danych ze strony internetowej na bardziej przyjazne dla oka struktury.
+#### Jeśli chcemy wyodrębnić pojedynczy tag, możemy użyć metody find (find_all), która znajdzie wszystkie wystąpienia tagu na stronie. Używając tej samej metody można zbadać konkretną klasę lub identyfikator na stronie. Żeby dowiedzieć się, jak oznaczony jest element, który chcemy znaleźć wystarczy na wybranej stronie internetowej użyć opcji Inspect (zbadaj element)
+![inspect](assets/scraping_inspect.png)
+#### W kodzie szukamy elementów, które nas interesują :
+![inspect_elements](assets/scraping_inspect_code.png)
+#### Jako pierwszy przykład scrape'ingu pobiorę ze [strony](https://coreyms.com) nagłówki postów razem z treściami i linkami do filmików na youtube. Zapiszę je w pliku scrape_one.
+![scraping1](assets/scraping1_result.png)
+#### Jak widać, wybrane elementy wyświetliły się w konsoli oraz zostały zapisane w pliku scrape_one - dane są od siebie oddzielone przecinkami.
+![scraping1](assets/scraping1_excel.png)
+
+#### W drugim przykładzie pobiorę ze [strony](https://pl.wikisource.org/wiki/Kategoria:Polscy_poeci) autorów wierszy i podam czas, który komputer poświęcił na pobranie informacji.
+![scraping2](assets/scraping2_result.png)
+#### Pobiorę 10 pierwszych autorów
+![scraping2](assets/scraping_two_result2.png)
+#### Dodam też foldery z autorami (niestety bez polskich znaków).
+![scraping2](assets/scraping2_result2_folders.png)
+
+
