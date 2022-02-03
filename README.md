@@ -5,6 +5,8 @@
 <p><a href="#Laboratorium3">Laboratorium 3</a></p>
 <p><a href="#Laboratorium4">Laboratorium 4</a></p>
 <p><a href="#Laboratorium5">Laboratorium 5</a></p>
+<p><a href="#Laboratorium5">Laboratorium 9</a></p>
+<p><a href="#Laboratorium5">Laboratorium 10</a></p>
 
 <a id="laboratorium1"></a>
 ## Laboratorium 1 - Blog
@@ -96,3 +98,32 @@ Po kliknięciu na tytuł posta, wyświetlają się jego detale.
 ![scraping2](assets/scraping2_result2_folders.png)
 
 
+<a id="laboratorium9"></a>
+## Laboratorium 9 - Django + React (aplikacja CRUD)
+
+<a id="laboratorium10"></a>
+## Laboratorium 10 - Django + React (aplikacja typu ToDo)
+
+### backend
+1. TODO admin panel
+![todoadmpan](assets/TODO.png)
+2. TOTO - task add
+![todotaskadd](assets/todotask1added.png)
+3. TODO - task delete
+![todotaskdel](assets/todotask1delete.png)
+4. TODO - delete confirm
+![tododelconf](assets/tododeletingconfirm.png)
+5. TODO - deleted task
+![tododeletedtask](assets/tododeletedtask.png)
+6. TODO - Api todos
+![todoapitodos](assets/todoapitodos.png)
+7. TODO - todolist
+![todolist](assets/todolist.png)
+8. TODO - example task 2 address
+![todolist](assets/todotask2address.png)
+
+### frontend
+ 
+![todofront](assets/frontendreact.png)
+![](assets/frontendtodocompleted.png)
+![](assets/frontendtodoedit.png)
