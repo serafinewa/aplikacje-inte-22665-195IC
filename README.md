@@ -5,8 +5,8 @@
 <p><a href="#Laboratorium3">Laboratorium 3</a></p>
 <p><a href="#Laboratorium4">Laboratorium 4</a></p>
 <p><a href="#Laboratorium5">Laboratorium 5</a></p>
-<p><a href="#Laboratorium5">Laboratorium 9</a></p>
-<p><a href="#Laboratorium5">Laboratorium 10</a></p>
+<p><a href="#Laboratorium9">Laboratorium 9</a></p>
+<p><a href="#Laboratorium10">Laboratorium 10</a></p>
 
 <a id="laboratorium1"></a>
 ## Laboratorium 1 - Blog
