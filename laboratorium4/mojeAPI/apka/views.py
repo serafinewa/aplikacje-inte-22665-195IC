@@ -3,37 +3,34 @@ from django.shortcuts import render
 from rest_framework import generics
 from rest_framework import filters
 from .models import Post
-from .permissions import IsAuthorOrReadOnly
-from .serializers import PostSerializer
-#2301
+from .permissions import IsAuthorOrReadOnly, IsAssigned
+from .serializers import PostSerializer, UserSerializer
+# 2301
 from django.contrib.auth import get_user_model
 from datetime import datetime
 from rest_framework import permissions
 from rest_framework import viewsets
 from rest_framework import status
-from rest_framework import IsAssigned
-from .serializers import UserSerializer
 from django.http import HttpResponse
 from rest_framework.views import APIView
 from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser
-from rest_framework.renderers import HTMLFormRenderer
-from rest_framework.renderers import JSONRenderer
-from rest_framework.renderers import BrowsableAPIRenderer
+from rest_framework.renderers import HTMLFormRenderer, JSONRenderer, BrowsableAPIRenderer
 from rest_framework.response import Response
 
-#class PostList(generics.ListCreateAPIView):
+# class PostList(generics.ListCreateAPIView):
 #    queryset = Post.objects.all()
 #    serializer_class = PostSerializer
 #    filter_backends = [filters.SearchFilter ,filters.OrderingFilter]
 #    search_fields = ['title']
 
 
-#class PostDetail(generics.RetrieveUpdateDestroyAPIView):
+# class PostDetail(generics.RetrieveUpdateDestroyAPIView):
 #    permission_classes = (IsAuthorOrReadOnly,)
 #    queryset = Post.objects.all()
 #    serializer_class = PostSerializer
 
+#  class PostList(APIView):
 
 class PostList(APIView):
     serializer_class = PostSerializer
@@ -61,6 +58,7 @@ class PostList(APIView):
             html.set_cookie('visits', value)
             html.set_cookie('dataflair', text)
             return html
+# class PostDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -70,18 +68,18 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class PostViewSet(viewsets.ModelViewSet):
-    permission_classes = (permissions.IsAuthenticated,IsAuthorOrReadOnly)
+    permission_classes = (permissions.IsAuthenticated, IsAuthorOrReadOnly)
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    filter_backends = [filters.SearchFilter ,filters.OrderingFilter]
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['title']
 
 
 class UserViewSet(viewsets.ModelViewSet):
-    permission_classes = (permissions.IsAuthenticated,IsAuthorOrReadOnly)
+    permission_classes = (permissions.IsAuthenticated, IsAuthorOrReadOnly)
     queryset = get_user_model().objects.all()
     serializer_class = UserSerializer
-    filter_backends = [filters.SearchFilter ,filters.OrderingFilter]
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['username']
 
 

@@ -1,4 +1,4 @@
-"""myapi URL Configuration
+"""mojeAPI URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -14,9 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include , re_path
+from django.urls import path, include, re_path
 from rest_framework import permissions
 from rest_framework.schemas import openapi, get_schema_view
+# from drf_yasg.views import get_schema_view
+# from drf_yasg import openapi
+from django.conf.urls import url
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -34,11 +37,14 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    #path('api/v1/', include('apka.urls')),
+    # path('api/v1/', include('apka.urls')),
     path('api/v1/', include('posts.urls')),
-    #2301
+    # 2301
     path('api/v1/rest-auth/', include('rest_auth.urls')),
     path('api/v1/rest-auth/registration/', include('rest_auth.registration.urls')),
+    # 0902
+    path('api/v1/', include('apka.urls')),
+
 
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),

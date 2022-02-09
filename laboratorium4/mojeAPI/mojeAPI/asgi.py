@@ -6,9 +6,9 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/asgi/
 """
 
 import os
-
+# noinspection PyUnresolvedReferences
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myapi.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mojeAPI.settings')
 
 application = get_asgi_application()
